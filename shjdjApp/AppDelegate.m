@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import "Reachability.h"
+
 
 @interface AppDelegate ()
+@property (nonatomic, strong) Reachability* reachability;
 
 @end
 
@@ -17,6 +21,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    MainViewController *mainViewController = [[MainViewController alloc] init];
+
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    
+    
+    self.window.rootViewController = nav;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [self.reachability startNotifier];
+    
     return YES;
 }
 
