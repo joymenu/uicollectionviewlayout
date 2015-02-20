@@ -57,8 +57,7 @@
     return self.dataArr.count;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-//    NSLog(@"%ld",[self.dataArr[section] count]);
+{    
     return [self.dataArr[section] count];
 }
 
@@ -67,6 +66,7 @@
 {
     NavCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
 //    cell.iconImageView.image = [UIImage imageNamed:@"1"];
+    NSLog(@"%@",cell);
     [cell.iconImageView setImage:[UIImage imageNamed:@"1"]];
     cell.backgroundColor = [UIColor redColor];
     return cell;
@@ -79,11 +79,11 @@
 }
 
 ////设置元素的的大小框
-//-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-//{
-//    UIEdgeInsets top = {5,10,15,5};
-//    return top;
-//}
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    UIEdgeInsets top = {5,10,15,5};
+    return top;
+}
 
 //设置顶部的大小
 //-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{

@@ -10,14 +10,18 @@
 
 
 @implementation NavCollectionViewCell
--(void)layoutSubviews
+-(id)initWithFrame:(CGRect)frame
 {
-    [super layoutSubviews];
-    self.iconImageView = [[UIImageView alloc] init];
-    self.iconImageView.frame = CGRectMake(0, 0, 60, 60);
-    self.iconImageView.backgroundColor = [UIColor greenColor];
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.iconImageView = [[UIImageView alloc] init];
+        self.iconImageView.frame = CGRectMake(0, 0, 70 , 70);
+        self.iconImageView.backgroundColor = [UIColor greenColor];
+        
+        [self.contentView addSubview:self.iconImageView];
+    }
     
-    [self.contentView addSubview:self.iconImageView];
-
+    return self;
 }
+
 @end
