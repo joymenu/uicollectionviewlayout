@@ -14,7 +14,9 @@
 {
     [super layoutSubviews];
     self.iconImageView = [[UIImageView alloc] init];
-    self.iconImageView.frame = CGRectMake(30, 66, 200, 200);
+    self.iconImageView.frame = CGRectMake(0, 0, 60, 60);
+    self.iconImageView.backgroundColor = [UIColor greenColor];
+    
     [self.contentView addSubview:self.iconImageView];
 
 }

@@ -35,7 +35,7 @@
     
     //初始化
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     self.collectionView = [[UICollectionView alloc]
                                         initWithFrame:CGRectMake(0, 66, self.view.bounds.size.width ,self.view.bounds.size.height)
                                         collectionViewLayout:flowLayout];
@@ -58,6 +58,7 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+//    NSLog(@"%ld",[self.dataArr[section] count]);
     return [self.dataArr[section] count];
 }
 
@@ -67,10 +68,28 @@
     NavCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
 //    cell.iconImageView.image = [UIImage imageNamed:@"1"];
     [cell.iconImageView setImage:[UIImage imageNamed:@"1"]];
+    cell.backgroundColor = [UIColor redColor];
     return cell;
 }
 
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //NSLog(@"%f",(kDeviceHeight-88-49)/4.0);
+    return CGSizeMake(70 ,70);
+}
 
+////设置元素的的大小框
+//-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+//{
+//    UIEdgeInsets top = {5,10,15,5};
+//    return top;
+//}
+
+//设置顶部的大小
+//-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+//    CGSize size={0,0};
+//    return size;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
