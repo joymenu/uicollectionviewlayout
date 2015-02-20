@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import "NavCollectionViewCell.h"
+#import "NavCollectionViewLayout.h"
+
 
 @interface MainViewController ()
 <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -23,24 +25,27 @@
     [super viewDidLoad];
     self.dataArr = [NSMutableArray new];
     
-    for (NSInteger i =0; i< 3;i++) {
+    for (NSInteger i = 0; i < 3;i++) {
         NSMutableArray *sectionArr = [NSMutableArray new];
-        for (NSInteger j =1; j<6; j++) {
+        for (NSInteger j = 1; j < 6; j++) {
             NSString *imageName = [NSString stringWithFormat:@"%ld",(long)(i * 5 + j)];
             [sectionArr addObject:imageName];
         }
         [self.dataArr addObject:sectionArr];
     }
     
+    NavCollectionViewLayout *layout = [NavCollectionViewLayout new];
+    layout.cellSize = CGSizeMake(80, 80);
+    layout.sectionSpacing = CGSizeMake(10, 10);
     
     //初始化
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     self.collectionView = [[UICollectionView alloc]
                                         initWithFrame:CGRectMake(0, 66, self.view.bounds.size.width ,self.view.bounds.size.height)
-                                        collectionViewLayout:flowLayout];
+                                        collectionViewLayout:layout];
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+//    self.collectionView.backgroundColor = [UIColor whiteColor];
     
     //注册
     [self.collectionView registerClass:[NavCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
@@ -65,25 +70,23 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NavCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-//    cell.iconImageView.image = [UIImage imageNamed:@"1"];
-    NSLog(@"%@",cell);
-    [cell.iconImageView setImage:[UIImage imageNamed:@"1"]];
+    NSString *imageName = [NSString stringWithFormat:@"%@",self.dataArr[indexPath.section][indexPath.item]];
+    cell.iconImageView.image = [UIImage imageNamed:imageName];
     cell.backgroundColor = [UIColor redColor];
     return cell;
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    //NSLog(@"%f",(kDeviceHeight-88-49)/4.0);
-    return CGSizeMake(70 ,70);
+    return CGSizeMake(80 ,80);
 }
 
 ////设置元素的的大小框
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    UIEdgeInsets top = {5,10,15,5};
-    return top;
-}
+//-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+//{
+//    UIEdgeInsets top = {5,10,15,5};
+//    return top;
+//}
 
 //设置顶部的大小
 //-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{

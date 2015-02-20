@@ -52,6 +52,7 @@
 		715900E71A7CF26300CE314D /* UIColor+HSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 715900C71A7CF26300CE314D /* UIColor+HSV.m */; };
 		715900EA1A7CF3DC00CE314D /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 715900E91A7CF3DC00CE314D /* Utilities.m */; };
 		715901021A7D0F1800CE314D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 715901011A7D0F1800CE314D /* MainViewController.m */; };
+		715E5BE11A974A4F00037C30 /* NavCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 715E5BE01A974A4F00037C30 /* NavCollectionViewLayout.m */; };
 		7184B6401A8C8E20001DD97D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7184B63F1A8C8E20001DD97D /* Reachability.m */; };
 		7184B6431A8C9087001DD97D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7184B6421A8C9087001DD97D /* SystemConfiguration.framework */; };
 		7184B6461A8CC28B001DD97D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7184B6451A8CC28B001DD97D /* UIKit.framework */; };
@@ -140,6 +141,8 @@
 		715900E91A7CF3DC00CE314D /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		715901001A7D0F1800CE314D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		715901011A7D0F1800CE314D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		715E5BDF1A974A4F00037C30 /* NavCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavCollectionViewLayout.h; sourceTree = "<group>"; };
+		715E5BE01A974A4F00037C30 /* NavCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavCollectionViewLayout.m; sourceTree = "<group>"; };
 		7184B63E1A8C8E20001DD97D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7184B63F1A8C8E20001DD97D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7184B6421A8C9087001DD97D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -172,6 +175,8 @@
 			children = (
 				714C33CB1A91EDDB00C30272 /* NavCollectionViewCell.h */,
 				714C33CC1A91EDDB00C30272 /* NavCollectionViewCell.m */,
+				715E5BDF1A974A4F00037C30 /* NavCollectionViewLayout.h */,
+				715E5BE01A974A4F00037C30 /* NavCollectionViewLayout.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 				715901021A7D0F1800CE314D /* MainViewController.m in Sources */,
 				715900DC1A7CF26300CE314D /* UIImage+GIF.m in Sources */,
 				715900DD1A7CF26300CE314D /* UIImage+MultiFormat.m in Sources */,
+				715E5BE11A974A4F00037C30 /* NavCollectionViewLayout.m in Sources */,
 				715900DA1A7CF26300CE314D /* SDWebImagePrefetcher.m in Sources */,
 				715900D21A7CF26300CE314D /* MKAnnotationView+WebCache.m in Sources */,
 				715900E61A7CF26300CE314D /* UIColor+Expanded.m in Sources */,

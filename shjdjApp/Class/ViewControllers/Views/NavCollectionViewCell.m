@@ -15,8 +15,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.iconImageView = [[UIImageView alloc] init];
-        self.iconImageView.frame = CGRectMake(0, 0, 70 , 70);
-        self.iconImageView.backgroundColor = [UIColor greenColor];
+        self.iconImageView.frame = CGRectMake(0, 0, 80 , 80);
+//        self.iconImageView.backgroundColor = [UIColor greenColor];
         
         [self.contentView addSubview:self.iconImageView];
     }
