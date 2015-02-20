@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7126EA5E1A80CBE500741527 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7126EA5D1A80CBE500741527 /* TestView.m */; };
+		714C33CD1A91EDDB00C30272 /* NavCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 714C33CC1A91EDDB00C30272 /* NavCollectionViewCell.m */; };
+		714E209B1A9735E000D21CB4 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E208C1A9735E000D21CB4 /* 1.png */; };
+		714E209C1A9735E000D21CB4 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E208D1A9735E000D21CB4 /* 10.png */; };
+		714E209D1A9735E000D21CB4 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E208E1A9735E000D21CB4 /* 11.png */; };
+		714E209E1A9735E000D21CB4 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E208F1A9735E000D21CB4 /* 12.png */; };
+		714E209F1A9735E000D21CB4 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20901A9735E000D21CB4 /* 13.png */; };
+		714E20A01A9735E000D21CB4 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20911A9735E000D21CB4 /* 14.png */; };
+		714E20A11A9735E000D21CB4 /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20921A9735E000D21CB4 /* 15.png */; };
+		714E20A21A9735E000D21CB4 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20931A9735E000D21CB4 /* 2.png */; };
+		714E20A31A9735E000D21CB4 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20941A9735E000D21CB4 /* 3.png */; };
+		714E20A41A9735E000D21CB4 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20951A9735E000D21CB4 /* 4.png */; };
+		714E20A51A9735E000D21CB4 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20961A9735E000D21CB4 /* 5.png */; };
+		714E20A61A9735E000D21CB4 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20971A9735E000D21CB4 /* 6.png */; };
+		714E20A71A9735E000D21CB4 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20981A9735E000D21CB4 /* 7.png */; };
+		714E20A81A9735E000D21CB4 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E20991A9735E000D21CB4 /* 8.png */; };
+		714E20A91A9735E000D21CB4 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E209A1A9735E000D21CB4 /* 9.png */; };
 		715900621A7CF22600CE314D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 715900611A7CF22600CE314D /* main.m */; };
 		715900651A7CF22600CE314D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 715900641A7CF22600CE314D /* AppDelegate.m */; };
 		7159006D1A7CF22600CE314D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7159006C1A7CF22600CE314D /* Images.xcassets */; };
@@ -53,8 +68,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7126EA5C1A80CBE500741527 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
-		7126EA5D1A80CBE500741527 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		714C33CB1A91EDDB00C30272 /* NavCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavCollectionViewCell.h; sourceTree = "<group>"; };
+		714C33CC1A91EDDB00C30272 /* NavCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavCollectionViewCell.m; sourceTree = "<group>"; };
+		714E208C1A9735E000D21CB4 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		714E208D1A9735E000D21CB4 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		714E208E1A9735E000D21CB4 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		714E208F1A9735E000D21CB4 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		714E20901A9735E000D21CB4 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
+		714E20911A9735E000D21CB4 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
+		714E20921A9735E000D21CB4 /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
+		714E20931A9735E000D21CB4 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		714E20941A9735E000D21CB4 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		714E20951A9735E000D21CB4 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		714E20961A9735E000D21CB4 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		714E20971A9735E000D21CB4 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		714E20981A9735E000D21CB4 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		714E20991A9735E000D21CB4 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		714E209A1A9735E000D21CB4 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		7159005C1A7CF22600CE314D /* shjdjApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shjdjApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715900601A7CF22600CE314D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		715900611A7CF22600CE314D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +167,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		714C33CA1A91ED9D00C30272 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				714C33CB1A91EDDB00C30272 /* NavCollectionViewCell.h */,
+				714C33CC1A91EDDB00C30272 /* NavCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		714E208B1A9735E000D21CB4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				714E208C1A9735E000D21CB4 /* 1.png */,
+				714E208D1A9735E000D21CB4 /* 10.png */,
+				714E208E1A9735E000D21CB4 /* 11.png */,
+				714E208F1A9735E000D21CB4 /* 12.png */,
+				714E20901A9735E000D21CB4 /* 13.png */,
+				714E20911A9735E000D21CB4 /* 14.png */,
+				714E20921A9735E000D21CB4 /* 15.png */,
+				714E20931A9735E000D21CB4 /* 2.png */,
+				714E20941A9735E000D21CB4 /* 3.png */,
+				714E20951A9735E000D21CB4 /* 4.png */,
+				714E20961A9735E000D21CB4 /* 5.png */,
+				714E20971A9735E000D21CB4 /* 6.png */,
+				714E20981A9735E000D21CB4 /* 7.png */,
+				714E20991A9735E000D21CB4 /* 8.png */,
+				714E209A1A9735E000D21CB4 /* 9.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		715900531A7CF22600CE314D = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +219,7 @@
 		7159005E1A7CF22600CE314D /* shjdjApp */ = {
 			isa = PBXGroup;
 			children = (
+				714E208B1A9735E000D21CB4 /* images */,
 				715900851A7CF26300CE314D /* Class */,
 				715900631A7CF22600CE314D /* AppDelegate.h */,
 				715900641A7CF22600CE314D /* AppDelegate.m */,
@@ -282,10 +344,9 @@
 		715900C81A7CF26300CE314D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				714C33CA1A91ED9D00C30272 /* Views */,
 				715901001A7D0F1800CE314D /* MainViewController.h */,
 				715901011A7D0F1800CE314D /* MainViewController.m */,
-				7126EA5C1A80CBE500741527 /* TestView.h */,
-				7126EA5D1A80CBE500741527 /* TestView.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -405,9 +466,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714E20A21A9735E000D21CB4 /* 2.png in Resources */,
 				715900E51A7CF26300CE314D /* README in Resources */,
+				714E209C1A9735E000D21CB4 /* 10.png in Resources */,
+				714E20A41A9735E000D21CB4 /* 4.png in Resources */,
+				714E20A01A9735E000D21CB4 /* 14.png in Resources */,
+				714E20A11A9735E000D21CB4 /* 15.png in Resources */,
+				714E20A61A9735E000D21CB4 /* 6.png in Resources */,
+				714E20A81A9735E000D21CB4 /* 8.png in Resources */,
+				714E20A31A9735E000D21CB4 /* 3.png in Resources */,
 				715900701A7CF22600CE314D /* LaunchScreen.xib in Resources */,
+				714E20A71A9735E000D21CB4 /* 7.png in Resources */,
+				714E209E1A9735E000D21CB4 /* 12.png in Resources */,
+				714E209D1A9735E000D21CB4 /* 11.png in Resources */,
+				714E20A91A9735E000D21CB4 /* 9.png in Resources */,
+				714E209F1A9735E000D21CB4 /* 13.png in Resources */,
 				715900E21A7CF26300CE314D /* Readme.rtf in Resources */,
+				714E209B1A9735E000D21CB4 /* 1.png in Resources */,
+				714E20A51A9735E000D21CB4 /* 5.png in Resources */,
 				7159006D1A7CF22600CE314D /* Images.xcassets in Resources */,
 				715900E41A7CF26300CE314D /* LICENSE in Resources */,
 			);
@@ -429,6 +505,7 @@
 			files = (
 				715900DE1A7CF26300CE314D /* UIImage+WebP.m in Sources */,
 				715900DB1A7CF26300CE314D /* UIButton+WebCache.m in Sources */,
+				714C33CD1A91EDDB00C30272 /* NavCollectionViewCell.m in Sources */,
 				715900D81A7CF26300CE314D /* SDWebImageDownloaderOperation.m in Sources */,
 				715900E71A7CF26300CE314D /* UIColor+HSV.m in Sources */,
 				715900651A7CF22600CE314D /* AppDelegate.m in Sources */,
@@ -448,7 +525,6 @@
 				715900D21A7CF26300CE314D /* MKAnnotationView+WebCache.m in Sources */,
 				715900E61A7CF26300CE314D /* UIColor+Expanded.m in Sources */,
 				715900E01A7CF26300CE314D /* UIImageView+WebCache.m in Sources */,
-				7126EA5E1A80CBE500741527 /* TestView.m in Sources */,
 				715900E11A7CF26300CE314D /* UIView+WebCacheOperation.m in Sources */,
 				715900D91A7CF26300CE314D /* SDWebImageManager.m in Sources */,
 				715900621A7CF22600CE314D /* main.m in Sources */,

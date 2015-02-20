@@ -7,10 +7,13 @@
 //
 
 #import "MainViewController.h"
-#import "TestView.h"
-
+#import "NavCollectionViewCell.h"
 
 @interface MainViewController ()
+<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+
+@property(nonatomic,strong) UICollectionView *collectionView;
+@property(nonatomic,strong) NSMutableArray* dataArr;
 
 @end
 
@@ -18,62 +21,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    self.navigationItem.title = @"福音传道";
+    self.dataArr = [NSMutableArray new];
     
-//    NSArray *test = @[@"aaa",@"bbb"];
-    
-//    NSString *str = [test componentsJoinedByString:@","];
-//    NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
-    
-    
-//    TestView* tv = [[TestView alloc] initWithFrame:self.view.frame];
-    
-//    [self.view addSubview:tv];
-    
-    self.view.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    UILabel *one = [[UILabel alloc] init];
-    UILabel *two = [[UILabel alloc] init];
-    UILabel *three = [[UILabel alloc] init];
-    
-    // Put some content in there for illustrations
-    NSInteger labelNumber = 0;
-    for (UILabel *label in @[one,two,three])
-    {
-        label.translatesAutoresizingMaskIntoConstraints = NO;
-        label.backgroundColor = [UIColor redColor];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.text = [NSString stringWithFormat:@"%ld",(long)labelNumber++];
-        [self.view addSubview:label];
+    for (NSInteger i =0; i< 3;i++) {
+        NSMutableArray *sectionArr = [NSMutableArray new];
+        for (NSInteger j =1; j<6; j++) {
+            NSString *imageName = [NSString stringWithFormat:@"%ld",(long)(i * 5 + j)];
+            [sectionArr addObject:imageName];
+        }
+        [self.dataArr addObject:sectionArr];
     }
     
-    // Create the views and metrics dictionaries
-    NSDictionary *metrics = @{@"height":@400.0};
-    NSDictionary *views = NSDictionaryOfVariableBindings(one,two,three);
     
-    // Horizontal layout - note the options for aligning the top and bottom of all views
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[one(two)]-[two(three)]-[three]-|" options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom metrics:metrics views:views]];
+    //初始化
+    UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    self.collectionView = [[UICollectionView alloc]
+                                        initWithFrame:CGRectMake(0, 66, self.view.bounds.size.width ,self.view.bounds.size.height)
+                                        collectionViewLayout:flowLayout];
     
-    // Vertical layout - we only need one "column" of information because of the alignment options used when creating the horizontal layout
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[one(height)]-|" options:0 metrics:metrics views:views]];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    //注册
+    [self.collectionView registerClass:[NavCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    
+    //设置代理
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    [self.view addSubview:self.collectionView];
+    
 
-    
 }
+-(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return self.dataArr.count;
+}
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.dataArr[section] count];
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NavCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+//    cell.iconImageView.image = [UIImage imageNamed:@"1"];
+    [cell.iconImageView setImage:[UIImage imageNamed:@"1"]];
+    return cell;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
